@@ -179,6 +179,15 @@ public class PlayerController : MonoBehaviour
         UpdateBombUI();
     }
 
+    // BOMB INVENTORY
+
+    public void RefillBombs()
+    {
+        currentBombs = maxBombs;
+
+        UpdateBombUI();
+    }
+
     // USER INTERFACE
 
     private void UpdateBombUI()
