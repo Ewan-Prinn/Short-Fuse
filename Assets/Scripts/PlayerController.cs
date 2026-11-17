@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour
     [Range(0f, 1f)]
     [SerializeField] private float airControl = 0.3f;
 
+    // RAGDOLL
+    [SerializeField] private ShortstuffRagdoll ragdollPrefab;
+
     // SETUP
 
     private void Awake()
@@ -120,6 +123,9 @@ public class PlayerController : MonoBehaviour
     private void OnJump(InputAction.CallbackContext context)
     {
         jumpRequested = true;
+
+        // TEMPORARY TEST
+        SpawnTestRagdoll();
     }
 
     private void HandleJump()
@@ -188,6 +194,20 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    private void SpawnTestRagdoll()
+    {
+        ShortstuffRagdoll ragdoll = Instantiate(
+            ragdollPrefab,
+            transform.position,
+            Quaternion.identity
+        );
+
+        ragdoll.Activate(
+            rb.linearVelocity,
+            new Vector2(5f, 10f),
+            transform.position + Vector3.left
+        );
+    }
 
 
 

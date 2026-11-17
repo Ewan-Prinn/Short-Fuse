@@ -700,6 +700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1983852047153458775}
+  - component: {fileID: 6640792346868010184}
   m_Layer: 0
   m_Name: Shortstuff_Ragdoll 1
   m_TagString: Untagged
@@ -726,3 +727,22 @@ Transform:
   - {fileID: 8330010672719119068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6640792346868010184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222275461962205941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3876a04701e48c4ebedf9f895e8f5ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torso: {fileID: 6493788606285480758}
+  bodyParts:
+  - {fileID: 512054211879002963}
+  - {fileID: 6493788606285480758}
+  - {fileID: 1645515289183783788}
+  - {fileID: 3130384760556343242}
+  blastSpin: 250
